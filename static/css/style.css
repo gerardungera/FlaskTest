@@ -1,0 +1,118 @@
+:root {
+    --bg-color: #0e1117;
+    --sidebar-bg: #161a24;
+    --text-color: #fafafa;
+    --accent-color: #deff9a;
+    --card-bg: #262730;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 320px;
+    background-color: var(--sidebar-bg);
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    font-size: 1.2rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+.widget-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    font-size: 0.9rem;
+    color: #b0b3b8;
+}
+
+input[type="range"],
+input[type="number"],
+select {
+    width: 100%;
+    background: var(--bg-color);
+    color: white;
+    border: 1px solid #444;
+    padding: 8px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+}
+
+.workspace {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.canvas-area {
+    background-color: #000;
+    border: 1px solid #333;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1 / 1;
+    max-width: 800px;
+}
+
+.canvas-area img {
+    width: 100%;
+    height: auto;
+    border-radius: 9px;
+}
+
+.metrics-area {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.metric-card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+
+.metric-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.info-box {
+    background-color: rgba(222, 255, 154, 0.05);
+    border-left: 4px solid #ffaa00;
+    padding: 15px;
+    border-radius: 0 10px 10px 0;
+    font-size: 0.95rem;
+}
